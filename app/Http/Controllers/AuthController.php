@@ -13,7 +13,6 @@ class AuthController extends Controller
 
     public function welcome(Request $request)
     {   
-        dd($request);
-        return view("welcam");
+        return view("welcam", ["first_name" => $request["first_name"],"last_name" => $request["last_name"]]);
     }
 }
